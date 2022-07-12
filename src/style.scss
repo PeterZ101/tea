@@ -7,9 +7,24 @@ body {
     font-family: Helvetica, sans-serif;
     font-size: 22px;
     color: seashell;
-    background-color: black;
+    background-color: #000;
     opacity: 0.9;
     text-align: center;
+}
+
+h2,
+h3,
+h4 {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+h3 {
+    font-size: 125%;
+}
+
+h2 {
+    font-size: 150%;
 }
 
 header {
@@ -19,6 +34,11 @@ header {
     justify-content: space-between;
     height: 69px;
     border-bottom: 1px solid seashell;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
 }
 
 .header-logo {
@@ -38,7 +58,7 @@ header {
 
 main {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 75px auto 0;
 }
 
 .main-mission {
@@ -48,17 +68,9 @@ main {
     display: flex;
     align-items: center;
     margin-bottom: 50px;
-}
-
-h2,
-h4 {
-    font-weight: bold;
-    font-size: 110%;
-}
-
-h2 {
-    font-size: 150%;
-    margin-bottom: 15px;
+    h2 {
+        margin-bottom: 20px;
+    }
 }
 
 .main-mission-text {
@@ -70,6 +82,12 @@ h2 {
 .main-tea {
     max-width: 1000px;
     margin: 0 auto 20px;
+    h2 {
+        line-height: 3;
+    }
+    h4 {
+        line-height: 2;
+    }
 }
 
 .main-tea-list {
@@ -86,4 +104,51 @@ h2 {
     figcaption {
         margin-top: 10px;
     }
+}
+
+.main-locations {
+    background-image: url(https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-locations-header {
+    flex-basis: 100%;
+    align-self: end;
+}
+
+.main-locations-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    li {
+        width: 300px;
+        background-color: #000;
+        line-height: 3;
+        padding: 20px 10px;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.footer-contact {
+    height: 200px;
+    margin: 0 auto;
+    padding: 20px 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-copyright {
+    text-align: left;
+    padding: 10px 20px;
 }
